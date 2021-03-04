@@ -4,3 +4,12 @@
    - copy:
         content: "hello world"
         dest: /tmp/abc.txt
+     notify: restart apache
+
+  handlers: 
+    - name: restart apache
+      service:
+        name: httpd
+        state: restarted
+        enabled: yes
+
