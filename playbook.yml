@@ -4,13 +4,4 @@
    - copy:
         content: "hello world"
         dest: /tmp/amit.txt
-     notify: restart httpd
-
-
-  handlers:
-    - name: restart httpd
-      service:
-        name: httpd
-        state: restarted
-        enabled: yes
-
+ 
